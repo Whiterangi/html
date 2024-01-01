@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRANCE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav {
+            box-sizing: border-box;
+            position: static;
+            height: 70%;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .link-to-page a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .link-to-page a:hover {
+            color: blue;
+        }
+
+        .block-color-gray_background1 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        .block-color-gray_background2 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 0;
+        }
+
+        div {
+            display: flex;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 8px;    
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        aside>img{
+            height: 450px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        details {
+            margin-top: 10px;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        aside{
+            margin-left: 10px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ebebeb;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('resize', function() {
+            handleResize();
+        });
+
+        function handleResize() {
+            const windowWidth = window.innerWidth;
+            console.log('Window Width:', windowWidth);
+
+            const section = document.querySelector('section');
+            if (windowWidth < 600) {
+                section.style.width = '100%';
+            } else {
+                section.style.width = '80%';
+            }
+        }
+
+        window.onload = function () {
+            handleResize();
+        };
+        
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userInput = document.querySelector('textarea').value;
+
+            console.log('User Question:', userInput);
+
+            alert('Your question:\n' + userInput);
+
+            document.querySelector('textarea').value = '';
+        });
+        
+    </script>
+    <header>
+        <h2>FRANCE</h2>
+    </header>
+
+    <nav>
+        <h3 id="LINK" class="block-color-gray_background1">다른 이야기들</h3>
+        <figure id="MAIN" class="link-to-page"><a href="MainPage.html">MAINPAGE</a></figure>
+        <figure id="COUNTRY2" class="link-to-page"><a href="SINGAPORE.html">SINGAPORE</a></figure>
+        <figure id="COUNTRY3" class="link-to-page"><a href="UK.html">UK</a></figure>
+        <figure id="COUNTRY4" class="link-to-page"><a href="JAPAN.html">JAPAN</a></figure>
+    </nav>
+    <h2 id="preliminary survey" class="block-color-gray_background1">사전조사</h2>
+                <details>
+                    <summary>환율</summary>
+                    <ul>
+                        <li>1 유로 = (약)1419원</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>먹고 싶은 음식</summary>
+                    <ul>
+                        <li>MACARON</li>
+                        <li>WINE</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>프랑스 여행 시 주의 사항</summary>
+                    <ul>
+                        <li>소매치기 꼭 조심하자. 이탈리아와 프랑스는 소매치기가 무지 많다.</li>
+                        <li>프랑스는 시위가 무진장 많다. 전 날 뉴스를 확인해서 시위가 있는 지 확인하자.</li>
+                        <li>한국대학 학생 할인이 되는 지 확인하자. 가끔 유로 회원국 대학만 되는 경우가 있다.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>교통카드</summary>
+                    <ul>
+                        <li>종이 티켓 발급</li>
+                        <li>해외 사용 가능 교통카드_카드내 와이파이 표시 확인</li>
+                    </ul>
+                </details>
+    <h2 id="TRAVELTOFRANCE" class="block-color-gray_background1">여행 프랑스어</h2>
+    <div>
+        <article>
+            <video controls loop muted preload="auto" poster="프랑스/여행프랑스어썸네일.jpg">
+                <source src="프랑스/여행프랑스어.mp4" type="video/mp4">
+                여행 프랑스어 영상
+            </video>
+        </article>        
+        <aside>
+            <h3 id="video1" class="block-color-gray_background2">여행용 프랑스어</h3>
+            여행 프랑스어 영상이다. 나는 어머니가 불어 전공이라 편하게 다녔지만 그래도 이 정도는 외우고 가니 많이 도움이 되었었다. 10분 내외의 짧은 영상이니 다운 받은 후 비행기에서 틀어두면 많은 도움이 된다.
+        </aside>
+    </div>
+    <h2 id="1st day" class="block-color-gray_background1">1일차</h2>
+    <div>
+        <article>
+            <img src="프랑스/프랑스1일차.jpg" alt="프랑스 1일차계획"><br>
+
+            프랑스 1일차의 계획이다. 프랑스는 스코틀랜드에 비하면 많이 더운 편이기에 꼭 날씨를 잘 확인하자. 이 날이 프랑스의 역대급 폭염이라고 하던데, 30도가 넘어서 정말 더웠다. 
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">1일차를 돌아보며</h3>
+            프랑스는 소매치기와 택시 덤탱이가 정말 많다. 공항에서 내리자마자 키큰 남성들이 붙잡고 불어로 뭐라고 하길래 무작정 어머니를 불러서 잘 해결했었다. 프랑스는 공항에 공식적으로 택시를 잡는 곳이 따로 존재하는데, 그곳에서 택시를 잡으면 덤탱이를 피할 수 있다. 돌아올 때도 해당 기사님에게 연락처를 알려달라 한 후에 데리러 와달라고 부탁하면 된다. 사진은 호텔 근처에 에펠탑이 있어서 사진만 얼른 찍고 왔었을 때의 사진이다.<br><br>
+            <img src="프랑스/프랑스1일차사진.jpg" alt="프랑스 1일차">
+        </aside>
+    </div>
+    <h2 id="2nd day" class="block-color-gray_background1">2일차</h2>
+    <div>
+        <article>
+            <img src="프랑스/프랑스2일차.jpg" alt="프랑스 2일차계획"><br>
+
+            프랑스 2일차의 계획이다. 이튿날에는 날씨가 꽤 좋아서 프랑스분들에게 물어보니 첫 째날이 유난히 더웠었다고 한다. 
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">2일차를 돌아보며</h3>
+            베르사유 궁전은 파리에서 지하철을 타고 가면 된다. 프랑스 지하철은 워낙 악명이 높아서 걱정했었는데, 생각보다 깨끗하고 노숙자도 없어서 신기했었다. 나중에 알고보니 내년에 열리는 파리 올림픽을 위해서 치안과 위생을 엄청나게 강화했다고 시민분이 알려주셨다. 그래서인지 경찰도 많이 돌아다녔고, 강매를 당하는 일도 다행히 없었다. 혹시라도 프랑스를 갈 예정이신 분들은 올림픽 전에 들리면 꽤 쾌적하게 다닐 수 있을 것 같다. 사진은 베르사유 궁전 안에서 정문을 찍은 것이다. 나는 경복궁 구경하는 것을 무척이나 좋아하는데, 확실히 우리나라 궁전들과 비교했을 때 눈이 아플 정도로 화려했었다.<br><br>
+            <img src="프랑스/프랑스2일차베르사유.jpg" alt="프랑스 2일차">
+        </aside>
+    </div>
+    <h2 id="3rd day" class="block-color-gray_background1">3일차</h2>
+    <div>
+        <article>
+            <img src="프랑스/프랑스3일차.jpg" alt="프랑스 3일차계획"><br>
+            프랑스 3일차의 계획이다.  오르세이 미술관은 생각보다 오래 걸린다... 루브르랑 같이 보기에는 무리일 수 있다는 사실!
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">3일차를 돌아보며</h3>
+            어릴 때 예술 책을 보면 꼭 오르세이 미술관에 있는 작품들이 나왔다. 내가 가장 좋아하는 작가는 모네인데, 마침 오르세이 미술관에서 인상파 전시전을 하고 있길래 가보았다. 오르세이는 전세계 미대생과 유로 회원국 대학생에게 무료로 미술관을 개방하고 있다. 내가 간 날은 사람이 없어서 그랬는지 안내원분이 나를 무료로! 들여보내 주셨다. 아마 나를 프랑스에서 유학중인 학생이라고 착각하신 모양이었다. 원래는 오르세이를 보고 루브르를 보려고 했는데 오르세이가 너무 좋았고, 박물관은 영국에서도 이미 봤어서 결국 오르세이 미술권에서만 4시간 가까이 있었다. 실제로 본 점묘화와 모네의 그림들은 너무 아름다웠다. 사진은 오르세이의 상징은 시계다.<br><br>
+            <img src="프랑스/프랑스3일차오르세이.jpg" alt="프랑스 3일차">
+        </aside>
+    </div>
+    <h2 id="3rd day" class="block-color-gray_background1">4일차</h2>
+    <div>
+        <article>
+            <img src="프랑스/프랑스4일차.jpg" alt="프랑스 4일차계획"><br>
+            프랑스 4일차의 계획이다.  전 날에 배탈이 나서 결국 계획은 하나도 못 지켰다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">4일차를 돌아보며</h3>
+            거의 2주 가까이 밀가루 음식을 먹으니 결국 배탈이 났다. 이쯤되니 짜글이에 김치찌개와 함께 갓 지은 쌀밥을 먹고 싶었다. 마지막 날은 결국 오르세이 미술관을 다시 들리며 천천히 마무리 했다. 루브르를 못 간 것은 슬펐지만, 4시간 넘게 줄 서야한다는 말을 듣고 바로 포기했다. 대신 근처 성당에 조그마하게 있는 데카르트의 무덤과 판테온을 보고 왔다. 수능을 정치와 법을 봤었는데, 시험에 나오던 루소의 무덤을 실제로 보게 되어서 뭔가 압도당하는 기분이 들었다. 그리고 판테온에는 푸코의 진자 모형이 아직도 움직이고 있는데, 생각보다 정말 천천히 움직여서 해당 내용을 배우면서 함께 봤었다. 사진은 돌아오는 비행기에서의 셀카이다!<br><br>
+            <img src="프랑스/돌아오는비행기.jpg" alt="프랑스 4일차">
+        </aside>
+    </div>
+<footer>
+    FRANCE<br>
+    All img Copyrights: Jeong Yoon Sun
+</footer>
+</body>
+</html>

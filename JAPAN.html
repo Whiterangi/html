@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAPAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        .link-to-page a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .link-to-page a:hover {
+            color: blue;
+        }
+
+        nav {
+            box-sizing: border-box;
+            position: static;
+            height: 70%;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .block-color-gray_background1 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+
+        .block-color-gray_background2 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 0;
+        }
+
+
+        div {
+            display: flex;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 8px;    
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        aside>img{
+            height: 450px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        details {
+            margin-top: 10px;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        aside{
+            margin-left: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+    
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ebebeb;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('resize', function() {
+            handleResize();
+        });
+
+        function handleResize() {
+            const windowWidth = window.innerWidth;
+            console.log('Window Width:', windowWidth);
+
+            const section = document.querySelector('section');
+            if (windowWidth < 600) {
+                section.style.width = '100%';
+            } else {
+                section.style.width = '80%';
+            }
+        }
+
+        window.onload = function () {
+            handleResize();
+        };
+        
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userInput = document.querySelector('textarea').value;
+
+            console.log('User Question:', userInput);
+
+            alert('Your question:\n' + userInput);
+
+            document.querySelector('textarea').value = '';
+        });
+        
+    </script>
+    <header>
+        <h2>JAPAN</h2>
+    </header>
+
+    <nav>
+        <h3 id="LINK" class="block-color-gray_background1">다른 이야기들</h3>
+        <figure id="MAIN" class="link-to-page"><a href="MainPage.html">MAINPAGE</a></figure>
+        <figure id="COUNTRY2" class="link-to-page"><a href="FRANCE.html">FRANCE</a></figure>
+        <figure id="COUNTRY3" class="link-to-page"><a href="UK.html">UK</a></figure>
+        <figure id="COUNTRY4" class="link-to-page"><a href="SINGAPORE.html">SINGAPORE</a></figure>
+    </nav>
+    <h2 id="preliminary survey" class="block-color-gray_background1">사전조사</h2>
+                <details>
+                    <summary>환율</summary>
+                    <ul>
+                        <li>1 엔 = (약)9원</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>먹고 싶은 음식</summary>
+                    <ul>
+                        <li>돈카츠</li>
+                        <li>우동</li>
+                        <li>스시</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>일본 여행 시 주의 사항</summary>
+                    <ul>
+                        <li>술 마실 수 있는 연령 확인</li>
+                        <li>지하철 노선 회사 잘 확인하기</li>
+                        <li>택시비 주의하기</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>교통카드</summary>
+                    <ul>
+                        <li>스이카나 파스모 사용</li>
+                        <li>해외 사용 가능 교통카드_카드내 와이파이 표시 확인</li>
+                    </ul>
+                </details>
+                <h2 id="TRAVELTOJAPAN" class="block-color-gray_background1">친구랑 여행 시 CHECK!</h2>
+                <div>
+                    <article>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>호텔</th>
+                                <th>식당</th>
+                                <th>신칸센 예매</th>
+                                <th>기타</th>
+                            </tr>
+                            <tr>
+                                <td>예약자</td>
+                                <td>정윤선</td>
+                                <td>각자 결제</td>
+                                <td>각자 결제</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>가격</td>
+                                <td>500,000</td>
+                                <td>각자 계산 후 제외하여 입금</td>
+                                <td>각자 현장에서 계산</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>입금여부</td>
+                                <td>O</td>
+                                <td>O</td>
+                                <td>O</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </article>        
+                    <aside>
+                        <h3 id="checktable" class="block-color-gray_background2">정산_여행 전 미리 준비</h3>
+                        친구랑 해외 여행을 계획 중이라면 정산은 꼭 꼼꼼히 하도록 하자.<br>정산이 애매하게 진행되면 싸우기 쉽다. 미리 예약을 해야하는 항목들을 정해두고 진행하면 훨씬 더 수월하고, 계획을 짜기에도 좋다.<br>특히 일본은 환율이 쌀 때 미리 예약 해두면 돈을 절약 할 수 있다!
+                    </aside>
+                </div>
+
+                <h2 id="1st day" class="block-color-gray_background1">1일차</h2>
+                <div>
+                    <article>
+                        <img src="일본/일본1일차.jpg" alt="일본 1일차계획"><br>
+                        일본 1일차 계획이다. 호텔이 니시신주쿠역이었으므로 1일차에는 신주쿠와 시부야 위주로 다녔었다.
+                    </article>
+                    <aside>
+                        <h3 id="review1" class="block-color-gray_background2">1일차를 돌아보며</h3>
+                         일본 1일차이다. 신주쿠와 시부야 근처에서 가볍게 놀았는데, 신주쿠 거리를 걷다보니 근처에 도쿄 타워가 있어서 잠깐 왔다갔다. 사실 일본어를 할 줄 알아서 일본은 정말 가벼운 마음으로 다니기 참 좋은 곳이라고 생각한다. 사진은 도쿄타워의 야경이다. 바로 앞에서 찍는 것 보다 그 건너편에서 찍는 것이 더 잘 나온다.<br><br>
+                        <img src="일본/일본1일차도쿄타워.jpg" alt="일본 1일차">
+                    </aside>
+                </div>
+
+                <h2 id="2nd day" class="block-color-gray_background1">2일차</h2>
+                <div>
+                    <article>
+                        <img src="일본/일본2일차.jpg" alt="일본 2일차계획"><br>
+                        일본 2일차 계획이다. 사실 일본의 경우 지하철이 국영화가 아닌 민영화 되어있기 때문에 자신이 구입한 교통카드를 잘 확인해서 노선을 정해야 한다. 무작정 구글맵에서 최단 거리순을 맞춰버리면 교통비가 갑자기 증가하게 된다.
+                    </article>
+                    <aside>
+                        <h3 id="review1" class="block-color-gray_background2">2일차를 돌아보며</h3>
+                        이 때가 2023년 1월이었는데, 날씨가 생각보다 따뜻해서 코트를 입고 다녔었다. 원래 이날 아사쿠사를 하려고 했지만, 찾아보니 금요일이 아사쿠사 절분제 축제라고 하여 급하게 메이지 신궁을 들렸었다. 그리고 밤에는 오모이데요코쵸에서 술을 마셨는데, 옆자리에 앉은 캐나다 분들, 일본 분들과 친해져서 새벽까지 함께 놀다가 대차게 취했었다. 다행히 술값이랑 택시비를 내주셔서 안전하게 호텔로 돌아왔었다.<br><br>
+                        <img src="일본/일본2일차사진.jpg" alt="일본 2일차">
+                    </aside>
+                </div>
+
+                <h2 id="3rd day" class="block-color-gray_background1">3일차</h2>
+                <div>
+                    <article>
+                        <img src="일본/일본3일차.jpg" alt="일본 3일차계획"><br>
+                        일본 3일차 계획이다. 사실 숙취 때문에 오전에는 아무것도 하지 못했었다.
+                    </article>
+                    <aside>
+                        <h3 id="review1" class="block-color-gray_background2">3일차를 돌아보며</h3>
+                        일본에서의 3일차. 아침에 라멘으로 숙취 해소를 하고 이 날은 쉬엄쉬엄 다녔었다. 다음 날에 신칸센을 타고 아침부터 이동했어야 했기에 호텔에서 푹 잔 다음 오후부터 지하철을 타고 1시간 내외의 거리 위주로 다녔다. 사진은 일본 경시청인데, 일본 드라마나 애니메이션에 자주 등장하는 곳이라 산책 중에 들렸었다.<br><br>
+                        <img src="일본/일본3일차사진.jpg" alt="일본 3일차">
+                    </aside>
+                </div>
+
+                <h2 id="3rd day" class="block-color-gray_background1">4일차</h2>
+                <div>
+                    <article>
+                        <img src="일본/일본4일차.jpg" alt="일본 4일차계획"><br>
+                        일본에서의 4일차 계획이다. 도쿄에 갈 일이 있다면 하코네에 가서 온천을 들리는 것을 추천한다. 당일치기로 다녀오면 그리 부담스럽지는 않다.
+                    </article>
+                    <aside>
+                        <h3 id="review1" class="block-color-gray_background2">4일차를 돌아보며</h3>
+                        하코네는 도쿄에서 신칸센을 타고 2시간 내외로 갈 수 있다. 사실 도쿄에만 있으면 서울과의 차이점을 잘 못 느낄 수도 있지만, 하코네 정도만 나가더라도 지브리 애니메이션 속의 그런 장소들이 펼쳐진다. 특히 하코네를 한 바퀴 돌고 마지막으로 즐기는 실외 온천은 겨울에 가면 더욱 좋다. 온천에서 나온 후에는 자루우동과 함께 맥주를 마셨는데 피로가 싹 풀리는 기분이었다. 사진은 하코네의 기념품으로 유명한 까만 달걀이다. 화산활동으로 인해 생긴 현상이라고 하는데, 맛은 일반 삶은 달걀과 비슷했다.<br><br>
+                        <img src="일본/일본4일차하코네.jpg" alt="일본 4일차">
+                    </aside>
+                </div>
+
+                <h2 id="5th day" class="block-color-gray_background1">5일차</h2>
+                <div>
+                    <article>
+                        <img src="일본/일본5일차.jpg" alt="일본 5일차계획"><br>
+                        일본에서의 5일차 계획이다. 전에 못간 아사쿠사에서 절분제 축제를 즐겼다. 일본은 축제가 많으니 가기 전에 한 번 조사해보는 것도 나쁘지 않을 것 같다.
+                    </article>
+                    <aside>
+                        <h3 id="review1" class="block-color-gray_background2">5일차를 돌아보며</h3>
+                        일본에서의 마지막 날은 아사쿠사를 갔다. 절분제 축제라 그런지, 원래 그런지는 모르지만 푸드트럭과 매장들이 정말 많았었다. 여기서 기념품으로 아사쿠사와 일본 브랜드와 콜라보한 립밤이나 핸드크림 등을 사왔었다. 그리고 일본의 신사에는 운을 점쳐주는 곳이 있는데, 대길이 나와서 곁에 있는 분들이 엄청 축하해줬었다. 사진은 축제에 포장마차 트럭에서 링고아메를 사서 먹은 것이다. 링고아메는 사과에 설탕을 두껍게 감싼 일본의 간식이라고 한다. 우리로 치면 설탕이 두꺼운 탕후루 같은 느낌이었다.<br><br>
+                        <img src="일본/일본5일차아사쿠사.jpg" alt="일본 5일차">
+                    </aside>
+                </div>
+<footer>
+    JAPAN<br>
+    All img Copyrights: Jeong Yoon Sun
+</footer>
+</body>
+</html>

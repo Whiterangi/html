@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        .link-to-page a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .link-to-page a:hover {
+            color: blue;
+        }
+
+        nav {
+            box-sizing: border-box;
+            position: static;
+            height: 70%;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .block-color-gray_background1 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+
+        .block-color-gray_background2 {
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-top: 0;
+        }
+
+
+        div {
+            display: flex;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 8px;    
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        aside>img{
+            height: 450px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        details {
+            margin-top: 10px;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        aside{
+            margin-left: 10px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ebebeb;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('resize', function() {
+            handleResize();
+        });
+
+        function handleResize() {
+            const windowWidth = window.innerWidth;
+            console.log('Window Width:', windowWidth);
+
+            const section = document.querySelector('section');
+            if (windowWidth < 600) {
+                section.style.width = '100%';
+            } else {
+                section.style.width = '80%';
+            }
+        }
+
+        window.onload = function () {
+            handleResize();
+        };
+        
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userInput = document.querySelector('textarea').value;
+
+            console.log('User Question:', userInput);
+
+            alert('Your question:\n' + userInput);
+
+            document.querySelector('textarea').value = '';
+        });
+        
+    </script>
+    <header>
+        <h2>UK</h2>
+    </header>
+
+    <nav>
+        <h3 id="LINK" class="block-color-gray_background1">다른 이야기들</h3>
+        <figure id="MAIN" class="link-to-page"><a href="MainPage.html">MAINPAGE</a></figure>
+        <figure id="COUNTRY2" class="link-to-page"><a href="SINGAPORE.html">SINGAPORE</a></figure>
+        <figure id="COUNTRY3" class="link-to-page"><a href="FRANCE.html">FRANCE</a></figure>
+        <figure id="COUNTRY4" class="link-to-page"><a href="JAPAN.html">JAPAN</a></figure>
+    </nav>
+    <h2 id="preliminary survey" class="block-color-gray_background1">사전조사</h2>
+                <details>
+                    <summary>환율</summary>
+                    <ul>
+                        <li>1 파운드 = (약)1640원</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>먹고 싶은 음식</summary>
+                    <ul>
+                        <li>FISH & CHIPS</li>
+                        <li>STICKY TOFFEE PUDDING</li>
+                        <li>FIVE GUYS</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>영국 여행 시 주의 사항</summary>
+                    <ul>
+                        <li>우산이나 모자 꼭 가져가기: 날씨 예측이 잘 안 되고 소나기가 자주 쏟아짐</li>
+                        <li>택시비가 엄청 비싸다</li>
+                        <li>지하철(TUBE)에서 인종차별 꼭 주의하자</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>교통카드</summary>
+                    <ul>
+                        <li>오이스터 카드 (현장 발급)</li>
+                        <li>해외 사용 가능 교통카드_카드내 와이파이 표시 확인</li>
+                    </ul>
+                </details>
+    <h2 id="1st day" class="block-color-gray_background1">1일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국1일차.jpg" alt="영국 1일차계획"><br>
+
+            영국 1일차의 계획이었다. 하지만 몸이 너무 피곤해서 서커스는 결국 못 보고 숙소에서 잠만 잤다...
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">1일차를 돌아보며</h3>
+            설레는 1일차를 기대했던 것과는 반대로, 영국에서의 1일차는 매우 피곤했었다. 계획했던 일 또한 최대한 축소하여 진행했었는데, 11시간이 넘는 장기 비행은 아무리 설레고 기대했던 여행이어도 몸이 힘들 수밖에 없다는 것을 몸소 느끼게 되었다.<br><br>
+            <img src="영국/1stDayInUK.jpg" alt="영국 1일차">
+        </aside>
+    </div>
+
+    <h2 id="2nd day" class="block-color-gray_background1">2일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국2일차.jpg" alt="영국 1일차계획"><br>
+
+            영국 2일차의 계획이다. 참고로 사진은 트리플이라는 어플을 사용 중인데, 여행 다닐 때마다 너무 잘 사용하고 있다. 홍보 아닌 홍보니 여행 다닐 때 꼭 써보면 좋을 것 같다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">2일차를 돌아보며</h3>
+            전날에 푹 자서 그런지 꽤 잘 일어났었다. 한국에서 늦게 자고 늦게 일어나는 생활을 했어서 그런지 시차는 꽤 잘 맞았다. 사진은 영국 박물관에 가기 전 호텔 1층에서 먹은 음식이었는데 양이 보는거에 비해 무지무지무지 많았다. 그리고 주인 아저씨가 당시 핑크머리를 보고 칭찬해줬던 기억이 있다.<br><br>
+            <img src="영국/영국2일차아침.jpg" alt="영국 2일차">
+        </aside>
+    </div>
+    
+    <h2 id="3rd day" class="block-color-gray_background1">3일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국3일차.jpg" alt="영국 3일차계획"><br>
+
+            영국 3일차의 계획이다. 이 중 몇 개는 가지를 못해서 다음 날로 미뤘던 것 같다. 사실상 3.5일 계획... 계획 상으로는 되게 많이 다닌 것처럼 보이지만, 서울로 치면 2~3개의 구만 다닌 셈이라 그렇게 힘들지는 않았다. 
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">3일차를 돌아보며</h3>
+            3일차쯤 되니까 꽤 여행이 익숙해졌다. 사진은 런던시청 앞에서 찍은 사진이다. 사촌 동생이 찍어준 거라 매우매우 마음에 든다. 저 핑크 머리는 여행 가기 3일 전?에 했는데 아버지가 보시고는 웃으셨었는데 젊은 날의 추억이라 생각하고 그냥 유지했었다.<br><br>
+            <img src="영국/영국3일차사진.jpg" alt="영국 3일차">
+        </aside>
+    </div>
+
+    <h2 id="4th day" class="block-color-gray_background1">4일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국4일차.jpg" alt="영국 4일차계획"><br>
+
+            영국 4일차의 계획이다. 런던에서 옥스포드로 가실 분들은 꼭꼭 멀미약을 먹기 바란다. 평소에도 멀미를 정말 자주하는데 오랜만에 차를 타니 정말 너무 힘들었었다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">4일차를 돌아보며</h3>
+            4일차는 옥스포드로 2시간 가까이 차를 타고 이동했다. 영국은 한국과 달리 아직 학기 중이라 여행을 가면 학생들이 쳐다봐서 숨어서 다녔었다. 그리고 가이드 아저씨를 불렀는데, 전형적인 택시아저씨st여서 아저씨의 자녀분들 자랑을 엄청 많이 들었었다... 그래도 한국인을 오랜만에 봐서 반가웠다. 그리고 학교 근처 조그마한 마을에 백조가 있었다!! 오리들이랑 놀던데 정말 동화처럼 아름다웠다.<br><br>
+            <img src="영국/영국4일차옥스포드.jpg" alt="영국 4일차">
+        </aside>
+    </div>
+
+    <h2 id="5th day" class="block-color-gray_background1">5일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국5일차.jpg" alt="영국 5일차계획"><br>
+
+            영국 5일차의 계획이다. 이 날은 옥스포드를 다녀온 다음 날이기도 했고, 그 다음 날 기차를 타고 이동 할 계획이었기에 조금 쉬면서 다녔었다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">5일차를 돌아보며</h3>
+            5일차는 쉬면서 다녔었는데, 이 때 윔블던 시즌이라 런던대학교 학생들이 펍에 엄청 많았었다. 그리고 서빙해주시던 알바 분이 한국인이라고 하니까 본인이 '꽃보다 남자'를 엄청 좋아한다고 하셔서 너무 놀랐다. 나도 안 본 드라마를 어쩌다 보셨는지 너무 궁금했다. 사진은 윔블던을 보며 마셨던 진이랑 모히토다.<br><br>
+            <img src="영국/영국5일차펍.jpg" alt="영국 4일차">
+        </aside>
+    </div>
+
+    <h2 id="6th day" class="block-color-gray_background1">6일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국6일차.jpg" alt="영국 6일차계획"><br>
+            영국 5일차의 계획이다. 스코틀랜드는 한국 직항이 없으니 가고 싶으신 분들은 런던에서 기차를 타는 것이 가장 빠를 것 같다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">6일차를 돌아보며</h3>
+            나는 엄청난 해리포터 덕후인데, 드디어! 킹스크로스역을 가 기차를 타봐서 너무 행복했었다. 좋은 기회로 기차 일등석을 탔는데, 영화에서 마녀 할머니가 아이들에게 간식을 주던 것 처럼, 스코틀랜드 출신 언니가 밥을 서빙해줬었다. 사진은 실제로 역에 있는 포토존인데, 앞에 줄이 너무 길어서 멀리서 사람 얼굴만 안 나오게 찍었다.
+           <br><br>
+            <img src="영국/영국6일차킹스크로스역.jpg" alt="영국 4일차">
+        </aside>
+    </div>
+
+    <h2 id="7th day" class="block-color-gray_background1">7일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국7일차.jpg" alt="영국 7일차계획"><br>
+            드디어 스코틀랜드이다. 스코틀랜드는 북극해 근처라 추우니 다들 조심하시길...
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">7일차를 돌아보며</h3>
+            지금껏 유럽 여러군데를 다녔지만, 스코틀랜드가 가장 좋았었던 것 같다. 사진은 스코틀랜드의 자연풍경인데, 윈도우 배경 화면 같은 자연이 몇시간이고 계속 이어졌다. 솔직히 런던은 다른 나라에서도 볼 수 있는 풍경이었다면 스코틀랜드는 정말 그 지역의 색깔이 확실했었다. 괜히 해리포터의 배경이 아니구나...
+           <br><br>
+            <img src="영국/스코틀랜드자연.jpg" alt="영국 4일차">
+        </aside>
+    </div>
+
+        <h2 id="8th day" class="block-color-gray_background1">8일차</h2>
+    <div>
+        <article>
+            <img src="영국/영국8일차.jpg" alt="영국 8일차계획"><br>
+            영국의 마지막 날이다! 당연하게도 스코틀랜드로 오는 한국 직항이 없는만큼 한국으로 가는 직항도 없기 때문에 일정을 잘 맞춰야한다.
+        </article>
+        <aside>
+            <h3 id="review1" class="block-color-gray_background2">8일차를 돌아보며</h3>
+            스코틀랜드에 와서 가장 하고 싶었던 것 중 하나가 스카치 위스키를 체험해보는 것이었다. 그리고 여기서 마셨던 위스키가 정말 너무 맛있었다. 스코틀랜드에 가게 된다면 꼭꼭 스카치 위스키 체험관과 펍을 들려서 위스키를 체험해 봤으면 좋겠다. 사진은 조니워커 본사에 가서 한정판 위스키와 병 각인을 체험한 것이었다. 조니워커 본사에서는 여권을 들고가서 나이를 확인 받고, 각인과 위스키 보틀 제작을 체험할 수 있다. 다만, 한 종류당 하루 100병을 한정 판매하기에 점심 때쯤에는 꼭 가자.
+           <br><br>
+            <img src="영국/조니워커.jpg" alt="영국 4일차">
+        </aside>
+    </div>
+<footer>
+    UK<br>
+    All img Copyrights: Jeong Yoon Sun
+</footer>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before Boarding</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+        }
+    
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+    
+        nav {
+            background-color: #f0f0f0;
+            padding: 1em;
+            width: 20%;
+            box-sizing: border-box;
+            margin-top: 60px;
+            position: static;
+            float: left;
+            height: 70%;
+        }
+        
+        nav > img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        div {
+            display: flex;
+        }
+        
+        .block-color-gray_background1{
+            display: inline-block;
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            width: 90%;
+            margin-top: 1em;
+            border-radius: 5px;
+        }
+        .block-color-gray_background2 {
+            display: inline-block;
+            background-color: rgb(178, 178, 178);
+            padding: 0.5em;
+            width: 100%;
+            margin-top: 1em;
+            border-radius: 5px;
+        }
+    
+        .link-to-page::before {
+            content: "\2022";
+            margin-right: 0.5em;
+            margin-left: -0.2em;
+        }
+    
+        .link-to-page a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .link-to-page a:hover {
+            color: blue;
+        }
+    
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            height: 70%;
+            float: right;
+            box-sizing: border-box;
+            margin-top: 70px;
+            position: static;
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+    
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ebebeb;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+    
+        #etc {
+            margin-top: 20px;
+        }
+    
+        details {
+            margin-top: 10px;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+    
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+    
+        form {
+            margin-top: 20px;
+        }
+    
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    
+        input[type="submit"], input[type="reset"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+    
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        window.addEventListener('resize', function() {
+            handleResize();
+        });
+
+        function handleResize() {
+            const windowWidth = window.innerWidth;
+            console.log('Window Width:', windowWidth);
+
+            const section = document.querySelector('section');
+            if (windowWidth < 600) {
+                section.style.width = '100%';
+            } else {
+                section.style.width = '80%';
+            }
+        }
+
+        window.onload = function () {
+            handleResize();
+        };
+        
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const userInput = document.querySelector('textarea').value;
+
+            console.log('User Question:', userInput);
+
+            alert('Your question:\n' + userInput);
+
+            document.querySelector('textarea').value = '';
+        });
+        
+    </script>
+    <header>
+        <h2>Before Boarding</h2>
+    </header>
+
+    <div>
+    
+    <nav>
+        <br>
+        <h3 id="ABOUT ME" class="block-color-gray_background1">ABOUT ME</h3>
+        <img src="main/profile.jpg" alt="프로필 사진"><br>
+        <p>WELCOME TO MY PAGE<br>
+        안녕하세요 :D<br> 
+        제 이름은 정윤선입니다!<br>
+        여행 다니는 것을 좋아합니다.</p>
+        <h3 id="MyStory" class="block-color-gray_background1">MY STORY</h3>
+        <figure id="COUNTRY1" class="link-to-page"><a href="UK.html">UK</a></figure>
+        <figure id="COUNTRY2" class="link-to-page"><a href="SINGAPORE.html">SINGAPORE</a></figure>
+        <figure id="COUNTRY3" class="link-to-page"><a href="FRANCE.html">FRANCE</a></figure>
+        <figure id="COUNTRY4" class="link-to-page"><a href="JAPAN.html">JAPAN</a></figure>
+    </nav>
+
+    <section>
+        <h3 id="checklist" class="block-color-gray_background2">CHECK LIST</h3>
+        <table>
+            <tr>
+                <td><input type="checkbox" id="passport" /><label for="passport">여권</label></td>
+                <td><input type="checkbox" id="simCard" /><label for="simCard">유심</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="currencyExchange" /><label for="currencyExchange">환전</label></td>
+                <td><input type="checkbox" id="powerBank" /><label for="powerBank">보조배터리</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="toiletries" /><label for="toiletries">화장품 및 세면도구</label></td>
+                <td><input type="checkbox" id="visa" /><label for="visa">비자 확인</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="transformerCharger" /><label for="transformerCharger">변압기 및 충전기</label></td>
+                <td><input type="checkbox" id="carryOnItems" /><label for="carryOnItems">기내 반입품</label></td>
+            </tr>
+        </table>
+
+            <h3 id="howtoplan" class="block-color-gray_background2">HOW TO PLAN</h3>
+            <table>
+                <tr>
+                    <th>날짜</th>
+                    <th>출발 시간</th>
+                    <th>도착 시간</th>
+                    <th>장소</th>
+                    <th>가는 법</th>
+                    <th>일정</th>
+                    <th>비용</th>
+                    <th>기타</th>
+                </tr>
+                <tr>
+                    <td>N일차</td>
+                    <td>시간</td>
+                    <td>시간</td>
+                    <td>도착 장소</td>
+                    <td>교통 수단</td>
+                    <td>일정 내용</td>
+                    <td>(원)</td>
+                    <td>기타</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        <h3 id="etc" class="block-color-gray_background2">ETC</h3>
+        <table>
+            <tr><td>
+                <details>
+                    <summary>공항에서 알아두면 좋을 것들</summary>
+                    <ul>
+                        <li>항공사의 수하물 규정을 확인하세요.</li>
+                        <li>여권 및 비자를 미리 체크하세요.</li>
+                        <li>출발 전에 충분한 시간을 확보하세요.</li>
+                    </ul>
+                </details>
+            </td></tr>
+       
+        <tr><td>
+            <details>
+                <summary>비행기 내부 팁</summary>
+                <ul>
+                    <li>탑승 전 좌석 배치를 확인하세요.</li>
+                    <li>비행기 이용 중 편안한 옷을 입으세요.</li>
+                    <li>필요한 물품은 핸드백에 넣어두세요.</li>
+                </ul>
+            </details>
+        </td></tr>
+        <tr><td>
+           <form action = "#" accept-charset="utf-8" name = "question" method="get">
+            <fieldset style = "width: 95%;">
+            <legend>question</legend>
+            질문: <br>
+            <textarea name = "comment" cols = "150" rows = "7" placeholder="질문 사항을 남겨주세요."></textarea>
+            <br><br>
+            <input type="submit" value="submit">
+            <input type = "reset" value="reset">
+            </fieldset>
+           </form>
+        </td></tr>
+        </table>
+    </section>
+    </div>
+    <footer>
+        -Main Page-
+    </footer>
+</body>
+</html>
